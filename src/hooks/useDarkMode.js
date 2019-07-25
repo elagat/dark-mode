@@ -5,9 +5,9 @@ const useDarkMode = () {
   const [On, setOn] = useLocalStorage('darkModeOn')
   useEffect(() => {
     if (useLocalStorage() === 'darkModeOn') {
-      return styles.insertRule(body { .darkmode });
+      return document.getElementByTagName("body").className = "dark-mode";
     } else {
-      
+      return document.getElementByTagName("body").classList.remove = "dark-mode"; 
     }
   })
 }
